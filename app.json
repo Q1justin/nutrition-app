@@ -1,0 +1,12 @@
+{
+  "name": "nutrition-app",
+  "displayName": "nutrition-app",
+  "expo": {
+    "name": "nutrition-app",
+    "slug": "nutrition-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
