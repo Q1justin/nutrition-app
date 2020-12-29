@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {  View, Text, Image, StyleSheet  } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
+import Quests from '../../components/Quests/Quests';
 import Diary from '../../components/Diary/Diary';
 
 class Profile extends Component {
@@ -30,6 +31,7 @@ class Profile extends Component {
           </Text>
           <ProgressBar style = {styles.progressBar} progress={0.3} width={350} color = {'red'}/>
         </View>
+        <Quests />
         <Diary style = {styles.diary} />
       </View>
     )

@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {  View, Text, StyleSheet  } from 'react-native';
 
-const diary = (props) => {
+const quest = (props) => {
   return(
     <View>
-      <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Diary</Text>
+      <Text>{props.order}. {props.questDetail}</Text>
     </View>
   )
 }
 
-export default diary;
+export default quest;
