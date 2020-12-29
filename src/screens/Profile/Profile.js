@@ -32,7 +32,7 @@ class Profile extends Component {
           <ProgressBar style = {styles.progressBar} progress={0.3} width={350} color = {'red'}/>
         </View>
         <Quests />
-        <Diary style = {styles.diary} />
+        <Diary />
       </View>
     )
   }
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'left',
         flexDirection: 'row',
-        height: 150
+        height: 100
     },
     profileInfo: {
       width: 200,
@@ -81,9 +81,6 @@ const styles = StyleSheet.create({
     },
     progressBar: {
       marginBottom: 10
-    },
-    diary: {
-        flex: 1,
     }
 })
 
