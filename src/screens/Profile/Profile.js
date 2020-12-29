@@ -12,21 +12,25 @@ class Profile extends Component {
           <View style = {styles.profileInfo}>
             <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Justin Do</Text>
             <Text style = {{fontSize: 15, marginBottom:10}}>Age: 23</Text>
-            <Text style = {{fontSize: 15, marginBottom:10}}>Status: Hungry</Text>
+            <Text style = {{fontSize: 15, marginBottom:10}}>Status: <View style = {styles.hungry}>Hungry</View></Text>
             <Text style = {{fontSize: 15, marginBottom:10}}>Streak: 2</Text>
           </View>
         </View>
         <View style = {styles.stats}>
-          <Text>
+          <Text style = {{fontSize: 15, marginBottom:10}}>
             Diligence
           </Text>
-          <ProgressBar progress={0.8} width={350} />
-          <Text>
+          <ProgressBar style = {styles.progressBar} progress={0.8} width={350} color = {'green'}/>
+          <Text style = {{fontSize: 15, marginBottom:10}}>
+            Recovery
+          </Text>
+          <ProgressBar style = {styles.progressBar} progress={0.5} width={350} color = {'yellow'}/>
+          <Text style = {{fontSize: 15, marginBottom:10}}>
             Guts
           </Text>
-          <ProgressBar progress={0.5} width={350} color = {'red'}/>
+          <ProgressBar style = {styles.progressBar} progress={0.3} width={350} color = {'red'}/>
         </View>
-        <Diary />
+        <Diary style = {styles.diary} />
       </View>
     )
   }
@@ -37,13 +41,12 @@ const styles = StyleSheet.create({
       borderColor: 'black',
       backgroundColor: '#85DB85',
       width: 400,
-      borderBottomWidth:5,
-      borderTopWidth:5,
-      borderLeftWidth: 5,
-      borderRightWidth: 5,
+      borderWidth: 5,
       marginHorizontal: 400,
       marginVertical: 20,
-      height: 700
+      height: 700,
+      flexDirection: 'column',
+      justifyContent: 'center'
     },
     profile: {
         flex: 1,
@@ -56,6 +59,13 @@ const styles = StyleSheet.create({
       marginHorizontal: 20,
       marginVertical: 20
     },
+    hungry: {
+    	backgroundColor: '#F8D030',
+      borderWidth: 2,
+      borderColor: '#A1871F',
+      borderRadius: 20,
+      padding: 2
+    },
     myFace: {
         borderRadius: 50,
         width: 150,
@@ -64,6 +74,13 @@ const styles = StyleSheet.create({
         marginVertical: 20,
     },
     stats: {
+        flex: 1,
+        marginHorizontal: 20,
+    },
+    progressBar: {
+      marginBottom: 10
+    },
+    diary: {
         flex: 1,
     }
 })
