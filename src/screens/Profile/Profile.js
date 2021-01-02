@@ -12,24 +12,11 @@ class Profile extends Component {
           <Image source={require('../../assets/myFACE.jpg')} style = {styles.myFace}/>
           <View style = {styles.profileInfo}>
             <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Justin Do</Text>
-            <Text style = {{fontSize: 15, marginBottom:10}}>Age: 23</Text>
-            <Text style = {{fontSize: 15, marginBottom:10}}>Status: <View style = {styles.hungry}>Hungry</View></Text>
-            <Text style = {{fontSize: 15, marginBottom:10}}>Streak: 2</Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>Age: 23</Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>Money: 1200</Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>Status: <View style = {styles.hungry}>Hungry</View></Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>Streak: 2</Text>
           </View>
-        </View>
-        <View style = {styles.stats}>
-          <Text style = {{fontSize: 15, marginBottom:10}}>
-            Diligence
-          </Text>
-          <ProgressBar style = {styles.progressBar} progress={0.8} width={350} color = {'green'}/>
-          <Text style = {{fontSize: 15, marginBottom:10}}>
-            Recovery
-          </Text>
-          <ProgressBar style = {styles.progressBar} progress={0.5} width={350} color = {'yellow'}/>
-          <Text style = {{fontSize: 15, marginBottom:10}}>
-            Guts
-          </Text>
-          <ProgressBar style = {styles.progressBar} progress={0.3} width={350} color = {'red'}/>
         </View>
         <Quests />
         <Diary />
@@ -51,7 +38,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
     },
     profile: {
-        flex: 1,
+        flex: 2,
         alignItems: 'left',
         flexDirection: 'row',
         height: 100
@@ -74,10 +61,6 @@ const styles = StyleSheet.create({
         height: 150,
         marginHorizontal: 20,
         marginVertical: 20,
-    },
-    stats: {
-        flex: 1,
-        marginHorizontal: 20,
     },
     progressBar: {
       marginBottom: 10
