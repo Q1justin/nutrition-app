@@ -25,24 +25,16 @@ class Profile extends Component {
 
 const styles = StyleSheet.create({
     screen: {
-      borderColor: 'black',
       backgroundColor: '#85DB85',
-      width: 400,
-      borderWidth: 5,
-      marginHorizontal: 400,
-      marginVertical: 20,
-      height: 700,
+      height: 900,
       flexDirection: 'column',
-      justifyContent: 'center'
     },
     profile: {
-        flex: 2,
-        alignItems: 'center',
-        height: 100,
-        flexWrap: 'wrap'
+      flex: 2,
+      alignItems: 'center'
     },
     profileInfo: {
-      marginHorizontal: 20,
+      alignItems:'center'
     },
     hungry: {
     	backgroundColor: '#F8D030',
@@ -52,14 +44,11 @@ const styles = StyleSheet.create({
       padding: 2
     },
     myFace: {
-        borderRadius: 50,
+        borderRadius: 70,
         width: 150,
         height: 150,
         marginHorizontal: 20,
-        marginVertical: 20,
-    },
-    progressBar: {
-      marginBottom: 10
+        marginVertical: 40,
     }
 })
 
