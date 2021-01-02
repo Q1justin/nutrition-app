@@ -12,10 +12,8 @@ class Profile extends Component {
           <Image source={require('../../assets/myFACE.jpg')} style = {styles.myFace}/>
           <View style = {styles.profileInfo}>
             <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Justin Do</Text>
-            <Text style = {{fontSize: 15, marginBottom:5}}>Age: 23</Text>
-            <Text style = {{fontSize: 15, marginBottom:5}}>Money: 1200</Text>
-            <Text style = {{fontSize: 15, marginBottom:5}}>Status: <View style = {styles.hungry}>Hungry</View></Text>
-            <Text style = {{fontSize: 15, marginBottom:5}}>Streak: 2</Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>3 Days</Text>
+            <Text style = {{fontSize: 15, marginBottom:5}}>$1,200</Text>
           </View>
         </View>
         <Quests />
@@ -39,14 +37,12 @@ const styles = StyleSheet.create({
     },
     profile: {
         flex: 2,
-        alignItems: 'left',
-        flexDirection: 'row',
-        height: 100
+        alignItems: 'center',
+        height: 100,
+        flexWrap: 'wrap'
     },
     profileInfo: {
-      width: 200,
       marginHorizontal: 20,
-      marginVertical: 20
     },
     hungry: {
     	backgroundColor: '#F8D030',
