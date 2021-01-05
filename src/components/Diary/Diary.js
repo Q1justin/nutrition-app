@@ -10,8 +10,8 @@ const diary = (props) => {
     <View style = {styles.diary}>
       <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Diary</Text>
       <View style = {styles.images}>
-        <Image source={require('../../assets/running.jpg')} style = {styles.running}/>
-        <Image source={require('../../assets/running.jpg')} style = {styles.running}/>
+        <Image source={require('../../assets/running.jpg')} style = {styles.image}/>
+        <Image source={require('../../assets/running.jpg')} style = {styles.image}/>
       </View>
     </View>
   )
@@ -28,18 +28,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  running: {
+  image: {
       width: 50,
       height: 50,
       marginHorizontal: 20,
       marginVertical: 20,
-  },
-  button: {
-       width: '80%',
-       height: 100,
-       alignSelf: 'center',
-       marginVertical: 5,
-   }
+  }
 })
 
 export default diary;
