@@ -1,17 +1,31 @@
 import React, {Component} from 'react';
 import {  View, Text, StyleSheet, TextInput, Image  } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
+import running from '../../assets/running.jpg';
 
 const diary = (props) => {
 
   const [value, onChangeText] = React.useState("");
 
+  let itemrender = (item, index) => {
+       return (
+           <View style={styles.slide}>
+               <Text style={styles.title}>{ item.title }</Text>
+           </View>
+       );
+   }
+
   return(
     <View style = {styles.diary}>
       <Text style = {{fontWeight: 'bold', fontSize: 20, marginBottom:10}}>Diary</Text>
       <View style = {styles.images}>
-        <Image source={require('../../assets/running.jpg')} style = {styles.image}/>
-        <Image source={require('../../assets/running.jpg')} style = {styles.image}/>
+      <Carousel
+          ref={(c) => { this._carousel = c; }}
+          data={running}
+          renderItem={itemrender}
+          sliderWidth={200}
+          itemWidth={200}
+        />
       </View>
     </View>
   )
