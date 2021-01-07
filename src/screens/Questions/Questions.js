@@ -7,7 +7,9 @@ class Questions extends Component{
       <View style = {styles.screen}>
           <Text style = {styles.title}>Questions</Text>
           <View style = {styles.questionBoard}>
-            <Text>1. First Question</Text>
+            <View style = {styles.questionBox}>
+              <Text>How many Hours Do You Sleep?</Text>
+            </View>
           </View>
       </View>
     )
@@ -35,6 +37,19 @@ const styles = StyleSheet.create({
       elevation: 10,
       borderRadius: 10,
       backgroundColor: '#fff'
+    },
+    questionBox:{
+      elevation:15,
+      backgroundColor: '#D3D3D3',
+      width: 250,
+      height: 50,
+      borderRadius: 10,
+      marginVertical: 15,
+      marginHorizontal: 50,
+      flexDirection: 'row',
+      position: 'absolute',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
     categories:{
 
