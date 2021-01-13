@@ -5,38 +5,46 @@ class Questions extends Component{
   render(){
     return(
       <View style = {styles.screen}>
-          <Text style = {styles.title}>Questions</Text>
+          <View style = {styles.topics}>
+
+          </View>
           <View style = {styles.questionBoard}>
             <View style = {styles.questionBox}>
               <Text>How many Hours Do You Sleep?</Text>
             </View>
           </View>
+          <View style = {styles.bottomNavBar}>
+          </View>
       </View>
     )
   }
-
 }
 
 const styles = StyleSheet.create({
     screen: {
-      backgroundColor: '#85DB85',
+      backgroundColor: '#B3EEFE',
       height: 900,
       flexDirection: 'column',
     },
-    title:{
-      textAlign: 'center',
-      fontWeight: 'bold',
-      fontSize: 40,
-      marginTop: 40,
-      marginBottom: 60
+    topics:{
+      width: 300,
+      height: 60,
+      marginHorizontal:50,
+      elevation: 10,
+      borderRadius: 10,
+      backgroundColor: '#fff',
+      marginTop: 60,
+      marginBottom: 10
     },
     questionBoard:{
       width: 350,
-      height: 350,
+      height: 500,
       marginHorizontal:30,
       elevation: 10,
       borderRadius: 10,
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
+      marginTop: 50,
+      marginBottom: 60
     },
     questionBox:{
       elevation:15,
@@ -51,9 +59,14 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center'
     },
-    categories:{
-
-    }
+    bottomNavBar:{
+      width: 500,
+      height: 60,
+      elevation: 10,
+      borderRadius: 10,
+      backgroundColor: '#fff',
+      marginTop: 20,
+    },
 })
 
 export default Questions;
