@@ -1,47 +1,84 @@
 import React, {Component} from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import {  View, Text, Image, StyleSheet, Button  } from 'react-native';
 
-const radioButton = (props) => {
-  return(
-    <View style = {styles.container}>
-    </View>
-  )
+class Questions extends Component{
+  render(){
+    return(
+      <View style = {styles.screen}>
+        <View style = {styles.topContainer}>
+          <Text style = {styles.headline}>Quests</Text>
+        </View>
+          <View style = {styles.questionBoard}>
+            <View style = {styles.buttonContainer}>
+              <Button
+                title = "Daily"/>
+              <Button
+                title = "Long"
+                color = "#8751F9"/>
+            </View>
+            <View style = {styles.questionBox}>
+              <Text>Eat 2000 calories per day</Text>
+            </View>
+          </View>
+          <View style = {styles.bottomNavBar}>
+          </View>
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
-	container: {
-    marginBottom: 35,
-    alignItems: 'center',
-    flexDirection: 'row',
-		justifyContent: 'space-between',
-	},
-  radioText: {
-      marginRight: 35,
-      fontSize: 20,
-      color: '#000',
-      fontWeight: '700'
-  },
-	radioCircle: {
-		height: 30,
-		width: 30,
-		borderRadius: 100,
-		borderWidth: 2,
-		borderColor: '#3740ff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-	selectedRb: {
-		width: 15,
-		height: 15,
-		borderRadius: 50,
-		backgroundColor: '#3740ff',
+    screen: {
+      backgroundColor: '#B3EEFE',
+      height: 900,
+      flexDirection: 'column',
     },
-  result: {
+    topContainer:{
+      height: 60,
+      marginBottom: 10
+    },
+    headline: {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: 30,
+      marginTop: 50,
+    },
+    questionBoard:{
+      width: 350,
+      height: 590,
+      marginHorizontal:30,
+      elevation: 10,
+      borderRadius: 10,
+      backgroundColor: '#fff',
+      marginTop: 50,
+      marginBottom: 30
+    },
+    buttonContainer: {
+      flexDirection: 'row',
+      height: 50,
+      width: '100%'
+    },
+    questionBox:{
+      elevation:15,
+      backgroundColor: '#F57070',
+      width: 250,
+      height: 50,
+      borderRadius: 10,
+      marginVertical: 70,
+      marginHorizontal: 50,
+      flexDirection: 'row',
+      position: 'absolute',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    bottomNavBar:{
+      width: 500,
+      height: 60,
+      elevation: 10,
+      borderRadius: 10,
+      backgroundColor: '#fff',
       marginTop: 20,
-      color: 'white',
-      fontWeight: '600',
-      backgroundColor: '#F3FBFE',
-  },
-});
+    },
+})
 
-export default radioButton;
+export default Questions;

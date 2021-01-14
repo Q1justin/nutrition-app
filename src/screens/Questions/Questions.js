@@ -8,20 +8,24 @@ class Questions extends Component{
         <View style = {styles.topContainer}>
           <Text style = {styles.headline}>Quests</Text>
         </View>
-          <View style = {styles.questionBoard}>
-            <View style = {styles.buttonContainer}>
-              <Button
-                title = "Daily"/>
-              <Button
-                title = "Long"
-                color = "#841584"/>
-            </View>
-            <View style = {styles.questionBox}>
-              <Text>Eat 2000 calories per day</Text>
-            </View>
+        <View style = {styles.categoryContainer}>
+          <View style = {styles.categoryToggle}>
+            <Text style = {styles.categoryText}>Daily</Text>
           </View>
-          <View style = {styles.bottomNavBar}>
+          <View style = {styles.categoryToggle}>
+            <Text style = {styles.categoryText}>Long</Text>
           </View>
+        </View>
+        <View style = {styles.quest}>
+          <Text>Quest1</Text>
+        </View>
+        <View style = {styles.quest}>
+          <Text>Quest2</Text>
+        </View>
+        <View style = {styles.quest}>
+          <Text>Quest3</Text>
+        </View>
+
       </View>
     )
   }
@@ -29,19 +33,43 @@ class Questions extends Component{
 
 const styles = StyleSheet.create({
     screen: {
-      backgroundColor: '#B3EEFE',
       height: 900,
-      flexDirection: 'column',
     },
     topContainer:{
-      height: 60,
-      marginBottom: 10
+      backgroundColor: '#219DFC',
+      height: 70,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginBottom: 30
     },
     headline: {
-      textAlign: 'center',
       fontWeight: 'bold',
       fontSize: 30,
-      marginTop: 50,
+      alignSelf: 'flex-end',
+    },
+    categoryContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-evenly',
+      marginBottom: 20
+    },
+    categoryToggle: {
+      backgroundColor: '#219DFC',
+      width: 100,
+      height: 50,
+      borderRadius: 10,
+    },
+    categoryText: {
+      fontWeight: 'bold',
+      fontSize: 15,
+      textAlign: 'center'
+    },
+    quest:{
+      elevation:15,
+      backgroundColor: '#F57070',
+      height: 50,
+      borderRadius: 10,
+      marginVertical: 20,
+      marginHorizontal: 50,
     },
     questionBoard:{
       width: 350,
@@ -60,7 +88,7 @@ const styles = StyleSheet.create({
     },
     questionBox:{
       elevation:15,
-      backgroundColor: '#D3D3D3',
+      backgroundColor: '#F57070',
       width: 250,
       height: 50,
       borderRadius: 10,
