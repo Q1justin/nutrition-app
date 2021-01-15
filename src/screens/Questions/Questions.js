@@ -5,60 +5,55 @@ class Questions extends Component{
   render(){
     return(
       <View style = {styles.screen}>
-      <ScrollView nestedScrollEnabled = {true}>
-          <View style = {styles.topContainer}>
-            <Text style = {styles.headline}>Quests</Text>
+        <View style = {styles.topContainer}>
+          <Text style = {styles.headline}>Quests</Text>
+        </View>
+        <View style = {styles.categoryContainer}>
+          <View style = {styles.categoryToggle}>
+            <Text style = {styles.categoryText}>Daily</Text>
           </View>
-          <View style = {styles.categoryContainer}>
-            <View style = {styles.categoryToggle}>
-              <Text style = {styles.categoryText}>Daily</Text>
+          <View style = {styles.categoryToggle}>
+            <Text style = {styles.categoryText}>Long</Text>
+          </View>
+        </View>
+        <View style = {styles.questsContainer}>
+          <ScrollView
+            contentContainerStyle = {styles.scrollQuest}
+            bounces = {true}
+            nestedScrollEnabled = {true}
+          >
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Eat 2000 calories</Text>
             </View>
-            <View style = {styles.categoryToggle}>
-              <Text style = {styles.categoryText}>Long</Text>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Run 3 miles</Text>
             </View>
-          </View>
-          <View style = {styles.questsContainer}>
-            <ScrollView
-              contentContainerStyle = {styles.scrollQuest}
-              bounces = {true}
-              nestedScrollEnabled = {true}
-            >
-              <View style = {styles.quest}>
-                <Text>Quest1</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest2</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest3</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest4</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest5</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest6</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest7</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest8</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest9</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest10</Text>
-              </View>
-              <View style = {styles.quest}>
-                <Text>Quest11</Text>
-              </View>
-            </ScrollView>
-          </View>
-        </ScrollView>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Sleep 8 hours</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Drink a liter of water</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Cry 500ml to release the water</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Eat 3 meals</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Stretch for 15 minutes before work</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Stretch for 15 minutes before going to bed</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Go to bed before midnight</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text style = {styles.questText}>Eat one healthy meal per day</Text>
+            </View>
+          </ScrollView>
+        </View>
       </View>
     )
   }
@@ -83,13 +78,14 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-evenly',
       marginBottom: 50,
-      elevation: 10
+      elevation: 10,
     },
     categoryToggle: {
       backgroundColor: '#219DFC',
       width: 150,
       height: 50,
-      borderRadius: 10
+      borderRadius: 10,
+      elevation: 20,
     },
     categoryText: {
       fontWeight: 'bold',
@@ -98,14 +94,22 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     questsContainer: {
-      height: "50%"
+      height: "60%"
     },
     quest:{
       elevation:15,
       backgroundColor: '#F57070',
       height: 50,
       borderRadius: 10,
-      marginHorizontal: 50
+      marginVertical: 10,
+      marginHorizontal: 30
+    },
+    questText:{
+      flexDirection: 'column',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: 15,
+      justifyContent: 'center'
     },
     bottomNavBar:{
       width: 500,
