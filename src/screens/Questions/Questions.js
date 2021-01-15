@@ -5,51 +5,60 @@ class Questions extends Component{
   render(){
     return(
       <View style = {styles.screen}>
-        <View style = {styles.topContainer}>
-          <Text style = {styles.headline}>Quests</Text>
-        </View>
-        <View style = {styles.categoryContainer}>
-          <View style = {styles.categoryToggle}>
-            <Text style = {styles.categoryText}>Daily</Text>
+      <ScrollView nestedScrollEnabled = {true}>
+          <View style = {styles.topContainer}>
+            <Text style = {styles.headline}>Quests</Text>
           </View>
-          <View style = {styles.categoryToggle}>
-            <Text style = {styles.categoryText}>Long</Text>
+          <View style = {styles.categoryContainer}>
+            <View style = {styles.categoryToggle}>
+              <Text style = {styles.categoryText}>Daily</Text>
+            </View>
+            <View style = {styles.categoryToggle}>
+              <Text style = {styles.categoryText}>Long</Text>
+            </View>
           </View>
-        </View>
-        <View style = {styles.questsContainer}>
-          <ScrollView
-            contentContainerStyle = {styles.scrollQuest}
-            bounces = {true}
-          >
-            <View style = {styles.quest}>
-              <Text>Quest1</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest2</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest3</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest4</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest5</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest6</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest7</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest8</Text>
-            </View>
-            <View style = {styles.quest}>
-              <Text>Quest9</Text>
-            </View>
-          </ScrollView>
-        </View>
+          <View style = {styles.questsContainer}>
+            <ScrollView
+              contentContainerStyle = {styles.scrollQuest}
+              bounces = {true}
+              nestedScrollEnabled = {true}
+            >
+              <View style = {styles.quest}>
+                <Text>Quest1</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest2</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest3</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest4</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest5</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest6</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest7</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest8</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest9</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest10</Text>
+              </View>
+              <View style = {styles.quest}>
+                <Text>Quest11</Text>
+              </View>
+            </ScrollView>
+          </View>
+        </ScrollView>
       </View>
     )
   }
@@ -57,7 +66,6 @@ class Questions extends Component{
 
 const styles = StyleSheet.create({
     screen: {
-      height: 900,
     },
     topContainer:{
       backgroundColor: '#219DFC',
@@ -90,7 +98,7 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     questsContainer: {
-      height: 400
+      height: "50%"
     },
     quest:{
       elevation:15,
