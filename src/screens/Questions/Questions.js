@@ -16,38 +16,40 @@ class Questions extends Component{
             <Text style = {styles.categoryText}>Long</Text>
           </View>
         </View>
-        <ScrollView
-          contentContainerStyle = {styles.scrollQuest}
-          bounces = {true}
-        >
-          <View style = {styles.quest}>
-            <Text>Quest1</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest2</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest3</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest4</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest5</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest6</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest7</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest8</Text>
-          </View>
-          <View style = {styles.quest}>
-            <Text>Quest9</Text>
-          </View>
-        </ScrollView>
+        <View style = {styles.questsContainer}>
+          <ScrollView
+            contentContainerStyle = {styles.scrollQuest}
+            bounces = {true}
+          >
+            <View style = {styles.quest}>
+              <Text>Quest1</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest2</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest3</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest4</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest5</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest6</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest7</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest8</Text>
+            </View>
+            <View style = {styles.quest}>
+              <Text>Quest9</Text>
+            </View>
+          </ScrollView>
+        </View>
       </View>
     )
   }
@@ -87,8 +89,7 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       alignItems: 'center'
     },
-    scrollQuest: {
-      justifyContent: 'space-between',
+    questsContainer: {
       height: 400
     },
     quest:{
@@ -97,34 +98,6 @@ const styles = StyleSheet.create({
       height: 50,
       borderRadius: 10,
       marginHorizontal: 50
-    },
-    questionBoard:{
-      width: 350,
-      height: 590,
-      marginHorizontal:30,
-      elevation: 10,
-      borderRadius: 10,
-      backgroundColor: '#fff',
-      marginTop: 50,
-      marginBottom: 30
-    },
-    buttonContainer: {
-      flexDirection: 'row',
-      height: 50,
-      width: '100%'
-    },
-    questionBox:{
-      elevation:15,
-      backgroundColor: '#F57070',
-      width: 250,
-      height: 50,
-      borderRadius: 10,
-      marginVertical: 70,
-      marginHorizontal: 50,
-      flexDirection: 'row',
-      position: 'absolute',
-      alignItems: 'center',
-      justifyContent: 'center'
     },
     bottomNavBar:{
       width: 500,
