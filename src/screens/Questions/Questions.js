@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {  View, Text, Image, StyleSheet, Button  } from 'react-native';
+import {  View, Text, Image, StyleSheet, Button, ScrollView  } from 'react-native';
 
 class Questions extends Component{
   render(){
@@ -16,16 +16,38 @@ class Questions extends Component{
             <Text style = {styles.categoryText}>Long</Text>
           </View>
         </View>
-        <View style = {styles.quest}>
-          <Text>Quest1</Text>
-        </View>
-        <View style = {styles.quest}>
-          <Text>Quest2</Text>
-        </View>
-        <View style = {styles.quest}>
-          <Text>Quest3</Text>
-        </View>
-
+        <ScrollView
+          contentContainerStyle = {styles.scrollQuest}
+          bounces = {true}
+        >
+          <View style = {styles.quest}>
+            <Text>Quest1</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest2</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest3</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest4</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest5</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest6</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest7</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest8</Text>
+          </View>
+          <View style = {styles.quest}>
+            <Text>Quest9</Text>
+          </View>
+        </ScrollView>
       </View>
     )
   }
@@ -50,26 +72,31 @@ const styles = StyleSheet.create({
     categoryContainer: {
       flexDirection: 'row',
       justifyContent: 'space-evenly',
-      marginBottom: 20
+      marginBottom: 50,
+      elevation: 10
     },
     categoryToggle: {
       backgroundColor: '#219DFC',
-      width: 100,
+      width: 150,
       height: 50,
-      borderRadius: 10,
+      borderRadius: 10
     },
     categoryText: {
       fontWeight: 'bold',
-      fontSize: 15,
-      textAlign: 'center'
+      fontSize: 20,
+      textAlign: 'center',
+      alignItems: 'center'
+    },
+    scrollQuest: {
+      justifyContent: 'space-between',
+      height: 400
     },
     quest:{
       elevation:15,
       backgroundColor: '#F57070',
       height: 50,
       borderRadius: 10,
-      marginVertical: 20,
-      marginHorizontal: 50,
+      marginHorizontal: 50
     },
     questionBoard:{
       width: 350,
