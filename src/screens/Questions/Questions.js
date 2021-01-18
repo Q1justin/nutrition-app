@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {  View, Text, Image, StyleSheet, Button, ScrollView, TouchableOpacity   } from 'react-native';
+import React, {Component, useState} from 'react';
+import {  View, Text, StyleSheet, Button, ScrollView, TouchableOpacity, Modal   } from 'react-native';
+import Question from './Question/Question';
 
 class Questions extends Component{
   render(){
@@ -60,6 +61,14 @@ class Questions extends Component{
             </TouchableOpacity>
           </ScrollView>
         </View>
+        <Modal
+          transparent={true}
+          visible= {false}
+        >
+          <View style = {styles.modalView}>
+            <Question />
+          </View>
+        </Modal>
       </View>
     )
   }
@@ -118,6 +127,11 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 15,
       justifyContent: 'center'
+    },
+    modalView: {
+      marginVertical: '50%',
+      height: '100%',
+      elevation: 5,
     }
 })
 

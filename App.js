@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Profile from './src/screens/Profile/Profile';
 import Questions from './src/screens/Questions/Questions';
+import Question from './src/screens/Questions/Question/Question';
 
 export default function App() {
   return (
